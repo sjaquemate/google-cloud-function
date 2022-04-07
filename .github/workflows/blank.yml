@@ -26,8 +26,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Check if env variable works 
-        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
-        run: echo "ohyeah"
+        run: echo ${{ env.DAY_OF_WEEK }} exposed
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
