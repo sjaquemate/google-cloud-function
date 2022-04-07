@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main ]
 env:
-  PROJECT: Google function test
+  PROJECT_ID: indigo-history-346510
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
       - name: Setup GCP Service Account
         uses: google-github-actions/setup-gcloud@v0
         with:
-          project_id: ${{env.PROJECT}}
+          project_id: ${{env.PROJECT_ID}}
           service_account_key: ${{ secrets.KEY_JSON }}
           export_default_credentials: true
 
