@@ -32,6 +32,7 @@ jobs:
           name: hello_world
           runtime: python39
           project_id: ${{env.PROJECT_ID}}
+          region: europe-west1
 
 #
       # - name: make the url aunthenticated
