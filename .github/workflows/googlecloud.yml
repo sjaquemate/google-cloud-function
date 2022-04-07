@@ -7,7 +7,11 @@ on:
 
 jobs:
 
-  job_id:
+  
+  googlecloudfunction:
+
+    runs-on: ubuntu-latest
+
     permissions:
       contents: 'read'
       id-token: 'write'
