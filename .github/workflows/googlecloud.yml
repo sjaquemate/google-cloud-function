@@ -29,13 +29,13 @@ jobs:
         id: deploy
         uses: google-github-actions/deploy-cloud-functions@main
         with:
-          name: ILoveMkdev
-          runtime: java11
+          name: hello_world
+          runtime: python39
           project_id: ${{env.PROJECT_ID}}
-          entry_point: functions.ILoveMkdev
+          entry_point: functions.echo
 
-      - name: make the url aunthenticated
-        run: |
-          gcloud functions add-iam-policy-binding ILoveMkdev --member="allUsers" --role="roles/cloudfunctions.invoker"
-      - name: test the url
-        run: curl "${{ steps.deploy.outputs.url }}"
+      # - name: make the url aunthenticated
+      #   run: |
+      #     gcloud functions add-iam-policy-binding ILoveMkdev --member="allUsers" --role="roles/cloudfunctions.invoker"
+      # - name: test the url
+      #   run: curl "${{ steps.deploy.outputs.url }}"
