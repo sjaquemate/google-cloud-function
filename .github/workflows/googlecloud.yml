@@ -7,7 +7,6 @@ on:
 
 jobs:
 
-  
   googlecloudfunction:
 
     runs-on: ubuntu-latest

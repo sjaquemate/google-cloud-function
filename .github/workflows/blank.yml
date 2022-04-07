@@ -24,6 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+
+      - name: Check if env variable works 
         if: ${{ env.DAY_OF_WEEK == 'Monday' }}
         run: echo "ohyeah"
 
