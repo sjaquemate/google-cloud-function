@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    environment: myenvironment # environment in which secrets is placed
+    environment: googlecloud # environment in which secrets is placed
 
     steps:
 
