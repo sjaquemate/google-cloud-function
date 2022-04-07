@@ -8,12 +8,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    environment: myenvironment # environment in which secrets is placed
+
     steps:
 
       - uses: actions/checkout@v2
 
       - name: Check if variable variable works 
-        run: echo '${{secrets.DAY_OF_WEEK}} ${{secrets.GCP_SA}} ...'
+        run: echo '${{secrets.TEST}} ${{secrets.TEST}} ...'
 
       - name: Setup GCP Service Account
         uses: google-github-actions/setup-gcloud@v0
