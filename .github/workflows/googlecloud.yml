@@ -13,7 +13,7 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Check if variable variable works 
         run: echo '${{secrets.TEST}} ${{secrets.TEST}} ...'
@@ -22,7 +22,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v0
         with:
           project_id: ${{env.PROJECT}}
-          service_account_key: ${{ secrets.GCP_SA }}
+          service_account_key: ${{ secrets.KEY_JSON }}
           export_default_credentials: true
 
       - name: deploy cloud function
