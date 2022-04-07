@@ -32,7 +32,6 @@ jobs:
           name: hello_world
           runtime: python39
           project_id: ${{env.PROJECT_ID}}
-          entry_point: functions.echo
 
 #
       # - name: make the url aunthenticated
