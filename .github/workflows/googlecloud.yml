@@ -6,6 +6,7 @@ on:
     - 'main'
 
 jobs:
+
   job_id:
     permissions:
       contents: 'read'
@@ -25,7 +26,3 @@ jobs:
       with:
         name: 'my-function'
         runtime: 'nodejs16'
-
-    # Example of using the output
-    - id: 'test'
-      run: 'curl "${{ steps.deploy.outputs.url }}"'
