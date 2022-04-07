@@ -34,6 +34,7 @@ jobs:
           project_id: ${{env.PROJECT_ID}}
           entry_point: functions.echo
 
+#
       # - name: make the url aunthenticated
       #   run: |
       #     gcloud functions add-iam-policy-binding ILoveMkdev --member="allUsers" --role="roles/cloudfunctions.invoker"
