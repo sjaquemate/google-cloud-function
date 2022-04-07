@@ -31,7 +31,7 @@ jobs:
         with:
           name: ILoveMkdev
           runtime: java11
-          project_id: mkdevyoutube
+          project_id: ${{env.PROJECT_ID}}
           entry_point: functions.ILoveMkdev
 
       - name: make the url aunthenticated
