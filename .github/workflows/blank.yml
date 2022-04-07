@@ -26,8 +26,8 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Check if env variable works 
-        if: ${{ secrets.DAY_OF_WEEK }} == 'Monday'
-        run: echo  ${{ secrets.DAY_OF_WEEK }} ${{ secrets.DAY_OF_WEEK }} exposed
+        if: ${{ env.DAY_OF_WEEK == 'Monday' }}
+        run: echo  hi guys 
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
